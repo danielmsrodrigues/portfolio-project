@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
+  margin-top: 4rem;
   margin-left: 3.25rem;
 
   h2 {
