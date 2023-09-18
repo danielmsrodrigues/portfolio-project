@@ -16,9 +16,7 @@ function About() {
         <Wrapper className="wrapper">
           <div className="left-wrapper">
             <TitleWrapper className="title-wrapper">
-              <Reveal>
-                <h2>About Me</h2>
-              </Reveal>
+              <h2>About Me</h2>
             </TitleWrapper>
             <InfoWrapper className="info-wrapper">
               <Reveal>

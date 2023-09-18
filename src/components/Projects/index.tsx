@@ -17,9 +17,7 @@ function Projects() {
       <Container className="container">
         <Wrapper className="wrapper">
           <TitleWrapper className="title-wrapper">
-            <Reveal>
-              <h2>Projects</h2>
-            </Reveal>
+            <h2>Projects</h2>
           </TitleWrapper>
           <ProjectsWrapper className="projects-wrapper">
             <Reveal>
