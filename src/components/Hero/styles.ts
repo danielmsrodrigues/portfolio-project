@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   text-align: center;
-  overflow: hidden;
 
   img {
     height: 2rem;
@@ -13,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  margin-top: 10rem;
+  margin-top: 7rem;
   letter-spacing: -0.84px;
   line-height: 3.5rem;
 
