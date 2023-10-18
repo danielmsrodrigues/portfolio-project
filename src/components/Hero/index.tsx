@@ -34,9 +34,7 @@ function Hero() {
             <h2>Web Developer</h2>
           </TitleWrapper>
           <div className="button-wrapper">
-            <div className="gradient-border">
-              <ContactBtn>Contact Me</ContactBtn>
-            </div>
+            <ContactBtn>Contact Me</ContactBtn>
           </div>
           <TechStackWrapper className="tech-stack-wrapper">
             <h3>Tech Stack</h3>

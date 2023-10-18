@@ -60,8 +60,9 @@ export const ContactBtn = styled.button`
   outline: none;
   border: none;
   color: inherit;
-  background: linear-gradient(60deg, #d62929e0, #f9cc2ea1);
   font-size: 1rem;
+  background-color: grey;
+  cursor: pointer;
 `;
 
 export const TechStackWrapper = styled.div`

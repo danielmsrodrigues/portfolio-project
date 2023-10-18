@@ -39,6 +39,7 @@ const Switch = styled.div`
       text-align: center;
       font-size: 1.5rem;
       justify-content: center;
+      letter-spacing: 2px;
     }
 
     svg {
@@ -62,6 +63,7 @@ const Switch = styled.div`
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenu = () => {
     setIsActive((isActive) => !isActive);
@@ -70,6 +72,16 @@ function Header() {
   const handleNavigation = () => {
     setIsActive(false);
   };
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -89,7 +101,13 @@ function Header() {
   return (
     <>
       <Container className="container">
-        <Wrapper className="wrapper">
+        <Wrapper
+          className="wrapper"
+          style={{
+            backgroundColor: isScrolled ? "#0c0c0c" : "",
+            transition: "all .2s linear",
+          }}
+        >
           <div className="logo">
             <a href="#">DR</a>
           </div>
@@ -127,8 +145,8 @@ function Header() {
                 xmlns="http://www.w3.org/2000/svg"
                 onClick={handleMenu}
               >
-                <line y1="1" x2="36" y2="1" stroke="white" stroke-width="2" />
-                <line y1="7" x2="36" y2="7" stroke="white" stroke-width="2" />
+                <line y1="1" x2="36" y2="1" stroke="white" strokeWidth="2" />
+                <line y1="7" x2="36" y2="7" stroke="white" strokeWidth="2" />
               </svg>
             )}
           </Switch>
