@@ -167,6 +167,9 @@ function Projects() {
               </Project>
             </Reveal>
           </ProjectsWrapper>
+          <br />
+          <hr />
+          <p>footer goes here</p>
         </Wrapper>
       </Container>
     </>

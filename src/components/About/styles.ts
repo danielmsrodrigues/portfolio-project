@@ -44,4 +44,9 @@ export const ResumeBtn = styled.button`
   color: inherit;
   background: none;
   font-size: 1rem;
+
+  &:hover {
+    background: linear-gradient(60deg, #d62929e0, #f9cc2ea1);
+    cursor: pointer;
+  }
 `;

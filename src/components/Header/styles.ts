@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   padding: 1.75rem 2.3rem;
