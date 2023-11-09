@@ -104,19 +104,18 @@ function Projects() {
                     <p>Typescript</p>
                   </Framework>
                   <Framework className="framework">
-                    <p>Angular</p>
+                    <p>React</p>
                   </Framework>
                 </FrameworkWrapper>
                 <Description className="description">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum, at reiciendis? A laudantium fuga libero et nulla sint
-                    maiores laborum!
+                    This is the current portfolio you are seeing. Check out the
+                    source code!
                   </p>
                 </Description>
                 <Url className="url">
                   <a href="#">
-                    <p>Project 3</p>
+                    <p>Portfolio</p>
                     <svg
                       width="9"
                       height="9"
@@ -137,19 +136,15 @@ function Projects() {
               <Project className="project-4">
                 <FrameworkWrapper className="framework-wrapper">
                   <Framework className="framework">
-                    <p>Javascript</p>
+                    <p>NodeJs</p>
                   </Framework>
                 </FrameworkWrapper>
                 <Description className="description">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum, at reiciendis? A laudantium fuga libero et nulla sint
-                    maiores laborum!
-                  </p>
+                  <p>This is a simple CRUD project using NodeJs!</p>
                 </Description>
                 <Url className="url">
                   <a href="#">
-                    <p>Project 4</p>
+                    <p>CRUD</p>
                     <svg
                       width="9"
                       height="9"
@@ -167,9 +162,6 @@ function Projects() {
               </Project>
             </Reveal>
           </ProjectsWrapper>
-          <br />
-          <hr />
-          <p>footer goes here</p>
         </Wrapper>
       </Container>
     </>

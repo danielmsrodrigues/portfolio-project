@@ -7,7 +7,7 @@ import {
   TitleWrapper,
   Wrapper,
 } from "./styles";
-import Resume from "../../assets/Resume_Daniel_Rodrigues.pdf";
+import Resume from "../../assets/Daniel Rodrigues.pdf";
 
 function About() {
   return (

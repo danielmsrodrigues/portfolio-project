@@ -1,65 +1,6 @@
-import styled from "styled-components";
 import { Container } from "../../styles";
-import { Wrapper } from "./styles";
-import { useState } from "react";
-
-const Switch = styled.div`
-  & ul {
-    display: none;
-  }
-
-  &.active ul {
-    display: block;
-  }
-
-  &.active div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 999;
-    width: 50vw;
-    height: 100vh;
-    background-color: black;
-    animation: slidein 0.3s ease-out;
-
-    @keyframes slidein {
-      from {
-        right: -100%;
-      }
-      to {
-        right: 0%;
-      }
-    }
-
-    ul {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      text-align: center;
-      font-size: 1.5rem;
-      justify-content: center;
-      letter-spacing: 2px;
-    }
-
-    svg {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      cursor: pointer;
-    }
-  }
-
-  /* @media only screen and (min-width: 800px) {
-    & ul {
-      display: block;
-    }
-
-    & svg {
-      display: none;
-    }
-  } */
-`;
+import { Navigation, Toggle, Wrapper } from "./styles";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -83,20 +24,19 @@ function Header() {
 
   window.addEventListener("scroll", changeBackground);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth >= 799 && window.innerWidth < 800) {
-  //       setIsActive(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 799 && window.innerWidth < 800) {
+        setIsActive(false);
+      }
+    };
 
-  //   window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
-  //   // Clean up the event listener on unmount
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -111,9 +51,9 @@ function Header() {
           <div className="logo">
             <a href="#">DR</a>
           </div>
-          <Switch className={isActive ? "active" : ""}>
+          <Toggle className={isActive ? "active" : ""}>
             <div>
-              <ul onClick={handleNavigation}>
+              <Navigation onClick={handleNavigation}>
                 <li>
                   <a href="#">About</a>
                 </li>
@@ -123,7 +63,7 @@ function Header() {
                 <li>
                   <a href="#">Contact</a>
                 </li>
-              </ul>
+              </Navigation>
               {isActive && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +89,7 @@ function Header() {
                 <line y1="7" x2="36" y2="7" stroke="white" strokeWidth="2" />
               </svg>
             )}
-          </Switch>
+          </Toggle>
         </Wrapper>
       </Container>
     </>

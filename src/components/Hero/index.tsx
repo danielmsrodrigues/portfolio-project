@@ -33,9 +33,7 @@ function Hero() {
             <h1>Daniel Rodrigues</h1>
             <h2>Web Developer</h2>
           </TitleWrapper>
-          <div className="button-wrapper">
-            <ContactBtn>Contact Me</ContactBtn>
-          </div>
+          <ContactBtn>Contact Me</ContactBtn>
           <TechStackWrapper className="tech-stack-wrapper">
             <h3>Tech Stack</h3>
             <MainWrapper className="main-wrapper">

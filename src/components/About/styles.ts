@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+
+  @media only screen and (min-width: 800px) {
+    height: auto;
+  }
 `;
 
 export const TitleWrapper = styled.div`

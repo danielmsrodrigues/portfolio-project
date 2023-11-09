@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+
+  @media only screen and (min-width: 800px) {
+    height: auto;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -12,6 +17,10 @@ export const TitleWrapper = styled.div`
   h2 {
     font-size: 2rem;
   }
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 15rem;
+  }
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -19,6 +28,11 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+
+  @media only screen and (min-width: 800px) {
+    width: 100%;
+    margin-right: 0;
+  }
 `;
 
 export const Project = styled.div`
@@ -29,6 +43,10 @@ export const Project = styled.div`
   border: 1px solid #5f5f5f;
   border-radius: 0.56rem;
   padding: 1rem;
+
+  @media only screen and (min-width: 800px) {
+    max-width: 18rem;
+  }
 `;
 
 export const Framework = styled.div`

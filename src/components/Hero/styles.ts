@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   height: 100vh;
-  width: 100%;
   text-align: center;
 
   img {
@@ -18,6 +17,7 @@ export const TitleWrapper = styled.div`
 
   h1 {
     font-size: 2.25rem;
+    color: #dea54b;
   }
 
   h2 {
@@ -42,6 +42,19 @@ export const TitleWrapper = styled.div`
     }
     to {
       -webkit-mask-position: -50%;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 12rem;
+
+    & h1 {
+      font-size: 6rem;
+      margin-bottom: 3rem;
+    }
+
+    & h2 {
+      font-size: 3rem;
     }
   }
 `;
@@ -102,14 +115,16 @@ export const SecondaryWrapper = styled.div`
 export const Mouse = styled.div`
   display: none;
 
-  /* @media */
-  width: 26px;
-  height: 40px;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
+  @media only screen and (min-width: 800px) {
+    display: block;
+    width: 26px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto 0;
+  }
 `;
 
 export const Roll = styled.div`
@@ -176,6 +191,10 @@ export const Socials = styled.div`
     margin: 0.5rem;
     opacity: 0.6;
   }
+
+  @media only screen and (min-width: 800px) {
+    display: block;
+  }
 `;
 
 export const SocialsText = styled.div`
@@ -191,5 +210,9 @@ export const SocialsText = styled.div`
 
   a:last-child span {
     margin-right: 0;
+  }
+
+  @media only screen and (min-width: 800px) {
+    display: none;
   }
 `;
