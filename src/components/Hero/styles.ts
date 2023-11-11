@@ -17,7 +17,7 @@ export const TitleWrapper = styled.div`
 
   h1 {
     font-size: 2.25rem;
-    color: #dea54b;
+    color: #eb5e28;
   }
 
   h2 {
@@ -111,7 +111,6 @@ export const SecondaryWrapper = styled.div`
   }
 `;
 
-// ADICIONAR RESPONSIVE
 export const Mouse = styled.div`
   display: none;
 
@@ -139,7 +138,7 @@ export const Roll = styled.div`
   -webkit-animation: mouseScroll 0.8s cubic-bezier(0.7, 0, 0.3, 1) infinite
     alternate;
   animation: mouseScroll 0.8s cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
-  z-index: 2;
+  z-index: 0;
 `;
 
 export const RollShadow = styled.div`
@@ -157,7 +156,7 @@ export const RollShadow = styled.div`
   animation-delay: 0s;
   -webkit-animation-delay: 80ms;
   animation-delay: 80ms;
-  z-index: 1;
+  z-index: -1;
 
   @-webkit-keyframes mouseScroll {
     0% {

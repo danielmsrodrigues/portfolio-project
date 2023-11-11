@@ -22,6 +22,11 @@ export const LeftCol = styled.div`
     font-size: 4em;
     opacity: 1;
   }
+
+  @media (width > 800px) {
+    margin: 0 3.25rem 0 3rem;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`
@@ -47,7 +52,7 @@ export const RightCol = styled.div`
 export const Form = styled.form`
   & input {
     padding: 1rem;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid #e1e1e1;
     display: block;
     margin: 0 0 1rem;
@@ -61,7 +66,7 @@ export const Form = styled.form`
     border: 1px solid #e1e1e1;
     font-family: inherit;
     padding: 1rem;
-    border-radius: 2px;
+    border-radius: 5px;
     resize: none;
     outline: none;
   }
@@ -73,7 +78,7 @@ export const Form = styled.form`
   & button {
     width: 100%;
     padding: 0.8rem;
-    background-color: rgb(153, 253, 2);
+    background-color: #027ba4;
     border: none;
     font-size: 1em;
     text-transform: uppercase;
@@ -81,9 +86,11 @@ export const Form = styled.form`
     letter-spacing: 2px;
     cursor: pointer;
     margin-top: 1rem;
+    color: white;
+    border-radius: 5px;
 
     &:hover {
-      background: rgb(137, 225, 5);
+      background: #016587;
     }
   }
 `;
