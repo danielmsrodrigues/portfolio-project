@@ -39,18 +39,22 @@ export const RightWrapper = styled.div`
 `;
 
 export const ResumeBtn = styled.button`
-  width: 12rem;
-  padding: 0.8rem;
-  margin-top: 4rem;
-  border-radius: 0.5rem;
-  outline: none;
-  border: 1px solid #d62929e0;
-  color: inherit;
-  background: none;
-  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  margin-top: 2rem;
+  color: white;
+  background: #ff7d00;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 125, 0, 1) 0%,
+    rgba(255, 95, 109, 1) 100%
+  );
+  border: 2px solid #ff7d00;
+  border-radius: 10px;
 
   &:hover {
-    background: linear-gradient(60deg, #d62929e0, #f9cc2ea1);
     cursor: pointer;
   }
 `;

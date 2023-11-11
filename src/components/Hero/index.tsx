@@ -31,7 +31,7 @@ function Hero() {
         <Wrapper className="wrapper">
           <TitleWrapper className="title-wrapper">
             <h1>Daniel Rodrigues</h1>
-            <h2>Web Developer</h2>
+            <h2>Full-Stack Developer</h2>
           </TitleWrapper>
           <ContactBtn>Contact Me</ContactBtn>
           <TechStackWrapper className="tech-stack-wrapper">

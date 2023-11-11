@@ -63,11 +63,9 @@ function About() {
               </Reveal>
             </p>
             <Reveal>
-              <ResumeBtn>
-                <a href={Resume} download>
-                  Download Resume
-                </a>
-              </ResumeBtn>
+              <a href={Resume} download>
+                <ResumeBtn>Download Resume</ResumeBtn>
+              </a>
             </Reveal>
           </RightWrapper>
         </Wrapper>

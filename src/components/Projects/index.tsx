@@ -24,6 +24,44 @@ function Projects() {
               <Project className="project-1">
                 <FrameworkWrapper>
                   <Framework className="framework">
+                    <p>Html</p>
+                  </Framework>
+                  <Framework className="framework">
+                    <p>Sass</p>
+                  </Framework>
+                  <Framework className="framework">
+                    <p>Javascript</p>
+                  </Framework>
+                </FrameworkWrapper>
+                <Description className="description">
+                  <p>This was my first ever project! Time flies!</p>
+                </Description>
+                <Url className="url">
+                  <a
+                    href="https://github.com/danielmsrodrigues/Responsive-Portfolio"
+                    target="_blank"
+                  >
+                    <p>First Portfolio</p>
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.84018 1.52033L8.35227 1.4954L8.32858 1.05657L7.86644 1.03407L7.84018 1.52033ZM0.291607 7.99955C0.0913592 8.1897 0.0913592 8.49799 0.291607 8.68813C0.491854 8.87828 0.816519 8.87828 1.01677 8.68813L0.291607 7.99955ZM8.61115 6.29022L8.35227 1.4954L7.32809 1.54526L7.58696 6.34008L8.61115 6.29022ZM7.86644 1.03407L2.8169 0.788258L2.76439 1.76078L7.81393 2.00659L7.86644 1.03407ZM7.4776 1.17604L0.291607 7.99955L1.01677 8.68813L8.20276 1.86462L7.4776 1.17604Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </Url>
+              </Project>
+            </Reveal>
+            <Reveal>
+              <Project className="project-1">
+                <FrameworkWrapper>
+                  <Framework className="framework">
                     <p>ReactJs</p>
                   </Framework>
                   <Framework className="framework">
@@ -67,6 +105,9 @@ function Projects() {
                   <Framework className="framework">
                     <p>NodeJs</p>
                   </Framework>
+                  <Framework className="framework">
+                    <p>Typescript</p>
+                  </Framework>
                 </FrameworkWrapper>
                 <Description className="description">
                   <p>
@@ -101,10 +142,10 @@ function Projects() {
               <Project className="project-3">
                 <FrameworkWrapper className="framework-wrapper">
                   <Framework className="framework">
-                    <p>Typescript</p>
+                    <p>ReactJs</p>
                   </Framework>
                   <Framework className="framework">
-                    <p>React</p>
+                    <p>Typescript</p>
                   </Framework>
                 </FrameworkWrapper>
                 <Description className="description">
@@ -114,7 +155,10 @@ function Projects() {
                   </p>
                 </Description>
                 <Url className="url">
-                  <a href="#">
+                  <a
+                    href="https://github.com/danielmsrodrigues/portfolio-project"
+                    target="_blank"
+                  >
                     <p>Portfolio</p>
                     <svg
                       width="9"
@@ -143,8 +187,85 @@ function Projects() {
                   <p>This is a simple CRUD project using NodeJs!</p>
                 </Description>
                 <Url className="url">
-                  <a href="#">
-                    <p>CRUD</p>
+                  <a
+                    href="https://github.com/danielmsrodrigues/Node-Project"
+                    target="_blank"
+                  >
+                    <p>CRUD NodeJs</p>
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.84018 1.52033L8.35227 1.4954L8.32858 1.05657L7.86644 1.03407L7.84018 1.52033ZM0.291607 7.99955C0.0913592 8.1897 0.0913592 8.49799 0.291607 8.68813C0.491854 8.87828 0.816519 8.87828 1.01677 8.68813L0.291607 7.99955ZM8.61115 6.29022L8.35227 1.4954L7.32809 1.54526L7.58696 6.34008L8.61115 6.29022ZM7.86644 1.03407L2.8169 0.788258L2.76439 1.76078L7.81393 2.00659L7.86644 1.03407ZM7.4776 1.17604L0.291607 7.99955L1.01677 8.68813L8.20276 1.86462L7.4776 1.17604Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </Url>
+              </Project>
+            </Reveal>
+            <Reveal>
+              <Project className="project-5">
+                <FrameworkWrapper className="framework-wrapper">
+                  <Framework className="framework">
+                    <p>ReactJs</p>
+                  </Framework>
+                  <Framework className="framework">
+                    <p>Typescript</p>
+                  </Framework>
+                </FrameworkWrapper>
+                <Description className="description">
+                  <p>Website for the company Pedaços de Aventura.</p>
+                </Description>
+                <Url className="url">
+                  <a
+                    href="https://github.com/danielmsrodrigues/pedacos-de-aventura"
+                    target="_blank"
+                  >
+                    <p>Pedaços de Aventura</p>
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.84018 1.52033L8.35227 1.4954L8.32858 1.05657L7.86644 1.03407L7.84018 1.52033ZM0.291607 7.99955C0.0913592 8.1897 0.0913592 8.49799 0.291607 8.68813C0.491854 8.87828 0.816519 8.87828 1.01677 8.68813L0.291607 7.99955ZM8.61115 6.29022L8.35227 1.4954L7.32809 1.54526L7.58696 6.34008L8.61115 6.29022ZM7.86644 1.03407L2.8169 0.788258L2.76439 1.76078L7.81393 2.00659L7.86644 1.03407ZM7.4776 1.17604L0.291607 7.99955L1.01677 8.68813L8.20276 1.86462L7.4776 1.17604Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </Url>
+              </Project>
+            </Reveal>
+            <Reveal>
+              <Project className="project-5">
+                <FrameworkWrapper className="framework-wrapper">
+                  <Framework className="framework">
+                    <p>Angular</p>
+                  </Framework>
+                  <Framework className="framework">
+                    <p>Typescript</p>
+                  </Framework>
+                </FrameworkWrapper>
+                <Description className="description">
+                  <p>
+                    This a form made using Angular's framework! It has
+                    validation on all fields and the submit button only becomes
+                    active once all fields are correctly filled.
+                  </p>
+                </Description>
+                <Url className="url">
+                  <a
+                    href="https://github.com/danielmsrodrigues/angular-form"
+                    target="_blank"
+                  >
+                    <p>Angular Form</p>
                     <svg
                       width="9"
                       height="9"
