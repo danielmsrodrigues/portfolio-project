@@ -32,52 +32,56 @@ function Contacts() {
   };
 
   return (
-    <Wrapper>
-      <LeftCol>
-        <Title>
-          <p>Do you have any question?</p>
-          <span>Contact me!</span>
-        </Title>
+    <>
+      <div id="contact"></div>
 
-        <Form action="post" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name *"
-            required
-            onChange={handleName}
-            value={name}
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email *"
-            required
-            onChange={handleEmail}
-            value={email}
-          />
-          <input
-            type="text"
-            name="subject"
-            id="subject"
-            placeholder="Subject *"
-            required
-            onChange={handleSubject}
-            value={subject}
-          />
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Message *"
-            onChange={handleMessage}
-            value={message}
-          />
-          <button type="submit">Send</button>
-        </Form>
-      </LeftCol>
-    </Wrapper>
+      <Wrapper>
+        <LeftCol>
+          <Title>
+            <p>Do you have any question?</p>
+            <span>Contact me!</span>
+          </Title>
+
+          <Form action="post" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name *"
+              required
+              onChange={handleName}
+              value={name}
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email *"
+              required
+              onChange={handleEmail}
+              value={email}
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject *"
+              required
+              onChange={handleSubject}
+              value={subject}
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message *"
+              onChange={handleMessage}
+              value={message}
+            />
+            <button type="submit">Send</button>
+          </Form>
+        </LeftCol>
+      </Wrapper>
+    </>
   );
 }
 

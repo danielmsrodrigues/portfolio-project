@@ -14,6 +14,7 @@ import {
 function Projects() {
   return (
     <>
+      <div id="projects"></div>
       <Container className="container">
         <Wrapper className="wrapper">
           <TitleWrapper className="title-wrapper">

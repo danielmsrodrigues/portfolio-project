@@ -12,6 +12,7 @@ import Resume from "../../assets/Daniel Rodrigues.pdf";
 function About() {
   return (
     <>
+      <div id="about"></div>
       <Container className="container">
         <Wrapper className="wrapper">
           <div className="left-wrapper">
