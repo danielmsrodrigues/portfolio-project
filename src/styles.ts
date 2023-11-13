@@ -20,6 +20,9 @@ ul{
   list-style-type: none;
 }
 
+
+
+
 body{
   position: relative;
     font-family: "Inter", "sans-serif";

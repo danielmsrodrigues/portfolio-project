@@ -44,7 +44,8 @@ export const Blur = styled.div`
 
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: -1;
   backdrop-filter: blur(40px);
 `;

@@ -7,8 +7,8 @@ const Cursor: React.FC = () => {
   useEffect(() => {
     const handlePointerMove = (e: PointerEvent) => {
       const { clientX, clientY } = e;
-      const scrollX = window.scrollX || window.pageXOffset;
-      const scrollY = window.scrollY || window.pageYOffset;
+      const scrollX = window.scrollX;
+      const scrollY = window.scrollY;
 
       blobRef.current?.animate(
         [{ left: `${clientX + scrollX}px`, top: `${clientY + scrollY}px` }],
