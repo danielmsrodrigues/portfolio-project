@@ -17,7 +17,7 @@ export const TitleWrapper = styled.div`
 
   h1 {
     font-size: 2.25rem;
-    color: #eb5e28;
+    color: #d34e24;
   }
 
   h2 {
@@ -74,8 +74,12 @@ export const ContactBtn = styled.button`
   border: none;
   color: inherit;
   font-size: 1rem;
-  background-color: grey;
+  background: #d34e24;
   cursor: pointer;
+
+  &:hover {
+    background: #c93c17;
+  }
 `;
 
 export const TechStackWrapper = styled.div`

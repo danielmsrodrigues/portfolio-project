@@ -1,4 +1,5 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Form, LeftCol, Title, Wrapper } from "./styles";
 
 function Contacts() {
@@ -7,12 +8,30 @@ function Contacts() {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
+  const form = useRef<HTMLFormElement | null>(null);
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setName("");
     setEmail("");
     setSubject("");
     setMessage("");
+
+    emailjs
+      .sendForm(
+        "service_tihig7b",
+        "template_xl2tu3s",
+        form.current!,
+        "JwKF6MpC6x89uvKAG"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,10 +61,10 @@ function Contacts() {
             <span>Contact me!</span>
           </Title>
 
-          <Form action="post" onSubmit={handleSubmit}>
+          <Form action="post" ref={form} onSubmit={handleSubmit}>
             <input
               type="text"
-              name="name"
+              name="user_name"
               id="name"
               placeholder="Name *"
               required
@@ -54,8 +73,8 @@ function Contacts() {
             />
             <input
               type="email"
-              name="email"
-              id="email"
+              name="user_email"
+              id="user_email"
               placeholder="Email *"
               required
               onChange={handleEmail}
@@ -63,7 +82,7 @@ function Contacts() {
             />
             <input
               type="text"
-              name="subject"
+              name="user_subject"
               id="subject"
               placeholder="Subject *"
               required

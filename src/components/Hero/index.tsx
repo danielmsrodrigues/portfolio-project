@@ -33,7 +33,11 @@ function Hero() {
             <h1>Daniel Rodrigues</h1>
             <h2>Full-Stack Developer</h2>
           </TitleWrapper>
-          <ContactBtn>Contact Me</ContactBtn>
+
+          <a href="#contact">
+            <ContactBtn>Contact Me</ContactBtn>
+          </a>
+
           <TechStackWrapper className="tech-stack-wrapper">
             <h3>Tech Stack</h3>
             <MainWrapper className="main-wrapper">

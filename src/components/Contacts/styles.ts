@@ -78,7 +78,7 @@ export const Form = styled.form`
   & button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #027ba4;
+    background-color: #d34e24;
     border: none;
     font-size: 1em;
     text-transform: uppercase;
@@ -90,7 +90,7 @@ export const Form = styled.form`
     border-radius: 5px;
 
     &:hover {
-      background: #016587;
+      background: #c93c17;
     }
   }
 `;

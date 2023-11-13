@@ -45,12 +45,12 @@ export const ResumeBtn = styled.button`
   padding: 0.8em 1.5em 0.8em 1.2em;
   margin-top: 2rem;
   color: white;
-  background: #027ba4;
+  background: #d34e24;
   border: none;
   border-radius: 5px;
 
   &:hover {
     cursor: pointer;
-    background: #016587;
+    background: #c93c17;
   }
 `;
