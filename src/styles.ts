@@ -38,6 +38,7 @@ body{
       color: inherit;
       text-decoration: none;
     }
+
 }
 
 ::-webkit-scrollbar-track

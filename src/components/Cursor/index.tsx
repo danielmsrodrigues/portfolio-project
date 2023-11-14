@@ -10,8 +10,24 @@ const Cursor: React.FC = () => {
       const scrollX = window.scrollX;
       const scrollY = window.scrollY;
 
+      // Assuming you have a footer with the ID "footer"
+      const footerElement = document.getElementById("footer");
+
+      // Calculate the maxY based on the footer position
+      const maxY = footerElement
+        ? Math.min(
+            scrollY + window.innerHeight - blobRef.current!.clientHeight,
+            footerElement.getBoundingClientRect().top +
+              scrollY -
+              blobRef.current!.clientHeight
+          )
+        : scrollY + window.innerHeight - blobRef.current!.clientHeight;
+
+      const constrainedX = clientX + scrollX;
+      const constrainedY = Math.min(clientY + scrollY, maxY);
+
       blobRef.current?.animate(
-        [{ left: `${clientX + scrollX}px`, top: `${clientY + scrollY}px` }],
+        [{ left: `${constrainedX}px`, top: `${constrainedY}px` }],
         { duration: 3000, fill: "forwards" }
       );
     };

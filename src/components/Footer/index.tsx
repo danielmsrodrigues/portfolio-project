@@ -2,7 +2,7 @@ import { Content, List, Wrapper } from "./styles";
 
 function Footer() {
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <Content>
         <p>© 2023 All rights reserved.</p>
         <List>
