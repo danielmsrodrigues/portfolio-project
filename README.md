@@ -2,10 +2,26 @@
 
 Welcome to my personal portfolio repository! This project serves as a showcase of my skills, projects, and a way for others to learn more about me.
 
+## See the live demo: https://danielrodrigues-web.vercel.app
+
 ## Project Overview
 
 - **Tech Stack**: React, Vite, TypeScript, react-hook-form, emailjs, styled-components, framer motion, react-router-dom.
 - **Purpose**: Personal portfolio with information about me, my projects, and a contact section.
+
+<hr/>
+
+- ## Technologies Used
+- React
+- Vite
+- TypeScript
+- React Router DOM
+- Styled Components
+- EmailJs
+- Framer Motion
+- React-hook-form
+
+<hr/>
 
 ## Getting Started
 
@@ -14,9 +30,11 @@ Welcome to my personal portfolio repository! This project serves as a showcase o
    git clone https://github.com/danielmsrodrigues/portfolio-project.git
 
 2. **Install dependencies**
+   ```bash
    npm install
 
-3. **Run the development server**
+4. **Run the development server**
+    ```bash
    npm run dev
 
 ## Usage
