@@ -1,22 +1,56 @@
-import { FormEvent, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Form, LeftCol, Title, Wrapper } from "./styles";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  ErrorMessage,
+  Form,
+  InputWrapper,
+  LeftCol,
+  Title,
+  Warn,
+  Wrapper,
+} from "./styles";
+
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 function Contacts() {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-
   const form = useRef<HTMLFormElement | null>(null);
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+  const notify = () => {
+    toast.success("Message Sent", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitSuccessful },
+    reset,
+  } = useForm<Inputs>({
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit: SubmitHandler<Inputs> = () => {
     emailjs
       .sendForm(
         "service_tihig7b",
@@ -32,23 +66,15 @@ function Contacts() {
           console.log(error.text);
         }
       );
+
+    notify();
   };
 
-  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
-  };
-
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubject = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSubject(e.target.value);
-  };
-
-  const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(e.target.value);
-  };
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <>
@@ -61,45 +87,101 @@ function Contacts() {
             <span>Contact me!</span>
           </Title>
 
-          <Form action="post" ref={form} onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="user_name"
-              id="name"
-              placeholder="Name *"
-              required
-              onChange={handleName}
-              value={name}
-            />
-            <input
-              type="email"
-              name="user_email"
-              id="user_email"
-              placeholder="Email *"
-              required
-              onChange={handleEmail}
-              value={email}
-            />
-            <input
-              type="text"
-              name="user_subject"
-              id="subject"
-              placeholder="Subject *"
-              required
-              onChange={handleSubject}
-              value={subject}
-            />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message *"
-              onChange={handleMessage}
-              value={message}
-            />
+          <Form action="post" ref={form} onSubmit={handleSubmit(onSubmit)}>
+            <InputWrapper>
+              <input
+                type="text"
+                id="name"
+                placeholder="Name *"
+                {...register("name", {
+                  required: "This field is required.",
+                  minLength: {
+                    value: 2,
+                    message: "Minimum length of 2 characters.",
+                  },
+                })}
+              />
+              {errors.name && (
+                <ErrorMessage>
+                  <small>{errors.name?.message}</small>
+                </ErrorMessage>
+              )}
+            </InputWrapper>
+            <InputWrapper>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email *"
+                {...register("email", {
+                  required: "This field is required.",
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Please enter a valid email address.",
+                  },
+                })}
+              />
+              {errors.email && (
+                <ErrorMessage>
+                  <small>{errors.email?.message}</small>
+                </ErrorMessage>
+              )}
+            </InputWrapper>
+            <InputWrapper>
+              <input
+                type="text"
+                id="subject"
+                placeholder="Subject *"
+                {...register("subject", {
+                  required: "This field is required.",
+                  minLength: {
+                    value: 5,
+                    message: "Minimum length of 5 characters.",
+                  },
+                })}
+              />
+              {errors.subject && (
+                <ErrorMessage>
+                  <small>{errors.subject?.message}</small>
+                </ErrorMessage>
+              )}
+            </InputWrapper>
+            <InputWrapper>
+              <textarea
+                id="message"
+                placeholder="Message"
+                {...register("message", {
+                  minLength: {
+                    value: 10,
+                    message: "Minimum length of 10 characters.",
+                  },
+                })}
+              />
+              {errors.message && (
+                <ErrorMessage>
+                  <small>{errors.message?.message}</small>
+                </ErrorMessage>
+              )}
+            </InputWrapper>
+            <Warn>
+              <small>Fields with an * are required.</small>
+            </Warn>
             <button type="submit">Send</button>
           </Form>
         </LeftCol>
       </Wrapper>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover={false}
+        theme="light"
+      />
     </>
   );
 }

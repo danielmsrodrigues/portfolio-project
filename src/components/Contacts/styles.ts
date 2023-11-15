@@ -55,7 +55,7 @@ export const Form = styled.form`
     border-radius: 5px;
     border: 1px solid #e1e1e1;
     display: block;
-    margin: 0 0 1rem;
+    margin: 0 0 0rem;
     width: 100%;
     outline: none;
     font-family: inherit;
@@ -92,5 +92,24 @@ export const Form = styled.form`
     &:hover {
       background: #c93c17;
     }
+  }
+`;
+
+export const InputWrapper = styled.div`
+  margin-bottom: 1rem;
+`;
+
+export const ErrorMessage = styled.div`
+  background-color: #fdc8c8;
+  margin: 0.2rem 0 1rem;
+  border-radius: 3px;
+  padding: 0.2rem;
+  font-size: 0.75em;
+  color: black;
+`;
+
+export const Warn = styled.div`
+  & small {
+    font-size: 0.7em;
   }
 `;
