@@ -1,10 +1,12 @@
 import { Content, List, Wrapper } from "./styles";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Wrapper id="footer">
       <Content>
-        <p>© 2023 All rights reserved.</p>
+        <p>© {currentYear} All rights reserved.</p>
         <List>
           <li>
             <a href="#">Home</a>
